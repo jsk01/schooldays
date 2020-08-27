@@ -20,37 +20,11 @@
   body,
   html {
     height: 100%;
-    color: rgb(1, 204, 255);
+    color: rgb(13, 13, 14);
     line-height: 1.8;
     background-color: white;
-  }
-
-  /* Create a Parallax Effect */
-  .bgimg-1,
-  .bgimg-2,
-  .bgimg-3 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  /* First image (Logo. Full height) */
-  .bgimg-1 {
-    background-image: url('/w3images/parallax1.jpg');
-    min-height: 100%;
-  }
-
-  /* Second image (Portfolio) */
-  .bgimg-2 {
-    background-image: url("/w3images/parallax2.jpg");
-    min-height: 400px;
-  }
-
-  /* Third image (Contact) */
-  .bgimg-3 {
-    background-image: url("/w3images/parallax3.jpg");
-    min-height: 200px;
+    font-size: 30px;
+    font-weight: 900;
   }
 
   .w3-wide {
@@ -87,16 +61,6 @@
     height: 150px;
   }
 
-  /* Turn off parallax scrolling for tablets and phones */
-  @media only screen and (max-device-width: 1600px) {
-
-    .bgimg-1,
-    .bgimg-2,
-    .bgimg-3 {
-      background-attachment: scroll;
-      min-height: 400px;
-    }
-  }
 </style>
 
 <body>
@@ -112,73 +76,60 @@
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding w3-center">
       <div class="w3-col m3 w3-margin w3-hover-opacity rcorners1"
-        style="font-size:30px"
-        onclick="onClick('https://tsbvi.zoom.us/j/6138283473)'">
+        onclick="window.location.assign('https://tsbvi.zoom.us/j/6138283473)');"
+        >
+        <p></p>
         <img src="https://lh3.googleusercontent.com/a-/AOh14GiDvjEHMuE1a-hu1Ic_5SuW2HAgULFiY_CBOxgh9A=s32-c"
           style="width: 64px;"
-          alt="Erin">
-        <p style="font-size: large;">Morning Group</p>
+          alt="Erin"
+          >&nbsp;Erin
+        </br>
+        <em>Morning Group</em>
       </div>
     </div>
 
     <div class="w3-row-padding w3-center w3-section">
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2" style="font-size:30px">
-        <img
-          src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
-          style="width: 64px;" onclick="onClick(this)" alt="The mist">
-        <p>Unknown</p>
-      </div>
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners3" style="font-size:30px">
+      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2"
+        style="font-size:30px"
+        onclick="window.location.assign(this);"
+        >
+        <p></p>
         <img
           src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
           style="width: 64px;"
-          onclick="onClick(&quot;https://tsbvi.zoom.us/j/6138283473&quot;)"
-          alt="Elina">
-        <p>PE</p>
+          alt="Unknown"
+          >&nbsp;
+        </br>
+        <em>Unknown</em>
       </div>
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2" style="font-size:30px"
-        onclick="onClick(https://tsbvi.zoom.us/j/5535732378)">
+      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners3"
+        style="font-size:30px"
+        onclick="javascript:window.location.assign('https://tsbvi.zoom.us/j/6138283473&quot');"
+        >
+        <p></p>
         <img
           src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
-          style="width:100%" alt="Unknown">
-        <p>Unknown</p>
+          style="width: 64px;"
+          alt="Elina"
+          >&nbsp;Elina
+        </br>
+        <em>PE</em>
       </div>
-
-
+      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2"
+        style="font-size:30px"
+        onclick="javascript:window.location.assign('https://tsbvi.zoom.us/j/5535732378');"
+        >
+        <p></p>
+        <img
+          src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
+          style="width: 64px;"
+          alt="Unknown"
+          >&nbsp;
+        </br>
+        <em>Unknown</em>
+      </div>
     </div>
   </div>
-
-  <!-- Modal for full size images on click
-  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
-        class="fa fa-remove"></i></span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption" class="w3-opacity w3-large"></p>
-    </div>
-  </div>
-
-  <! -- Third Parallax Image with Portfolio Text -- >
-  <div class="bgimg-3 w3-display-container w3-opacity-min">
-    <div class="w3-display-middle">
-      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-    </div>
-  </div> -->
-
-
-  <!-- Footer
-  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
-        class="w3-hover-text-green">w3.css</a></p>
-  </footer>
- -->
-  <script>
-    // Modal Image Gallery
-    function onClick(url) {
-      window.location.assign(url);
-    }
-  </script>
-
 </body>
 
 </html>
