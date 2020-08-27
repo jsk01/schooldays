@@ -22,34 +22,36 @@
     height: 100%;
     color: rgb(1, 204, 255);
     line-height: 1.8;
-    background-color: darkblue;
+    background-color: white;
   }
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  /* Create a Parallax Effect */
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('/w3images/parallax1.jpg');
-  min-height: 100%;
-}
+  /* First image (Logo. Full height) */
+  .bgimg-1 {
+    background-image: url('/w3images/parallax1.jpg');
+    min-height: 100%;
+  }
 
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
-}
+  /* Second image (Portfolio) */
+  .bgimg-2 {
+    background-image: url("/w3images/parallax2.jpg");
+    min-height: 400px;
+  }
 
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
-  min-height: 200px;
-}
+  /* Third image (Contact) */
+  .bgimg-3 {
+    background-image: url("/w3images/parallax3.jpg");
+    min-height: 200px;
+  }
 
   .w3-wide {
     letter-spacing: 10px;
@@ -59,39 +61,42 @@
     cursor: pointer;
   }
 
-.rcorners1 {
-  border-radius: 25px;
-  background: #73AD21;
-  padding: 20px;
-  width: 200px;
-  height: 150px;
-}
-
-.rcorners2 {
-  border-radius: 25px;
-  border: 2px solid #73AD21;
-  padding: 20px;
-  width: 200px;
-  height: 150px;
-}
-
-.rcorners3 {
-  border-radius: 25px;
-  background: url(http://blog.hostbaby.com/wp-content/uploads/2013/07/antiquepaper_1400x900-150x96.jpg);
-  background-position: left top;
-  background-repeat: repeat;
-  padding: 20px;
-  width: 200px;
-  height: 150px;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
+  .rcorners1 {
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
   }
-}
+
+  .rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+  }
+
+  .rcorners3 {
+    border-radius: 25px;
+    background: url(http://blog.hostbaby.com/wp-content/uploads/2013/07/antiquepaper_1400x900-150x96.jpg);
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+  }
+
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1600px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: scroll;
+      min-height: 400px;
+    }
+  }
 </style>
 
 <body>
@@ -106,20 +111,41 @@
 
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding w3-center">
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners1" style="font-size:30px" onclick="onClick(&quot;https://via.placeholder.com/150/&quot;)">
-        <img src="/w3images/p1.jpg"
-          alt="Teacher pic">Morning Group
+      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners1"
+        style="font-size:30px"
+        onclick="onClick('https://tsbvi.zoom.us/j/6138283473)'">
+        <img src="https://lh3.googleusercontent.com/a-/AOh14GiDvjEHMuE1a-hu1Ic_5SuW2HAgULFiY_CBOxgh9A=s32-c"
+          style="width: 64px;"
+          alt="Erin">
+        <p style="font-size: large;">Morning Group</p>
       </div>
     </div>
 
     <div class="w3-row-padding w3-center w3-section">
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2">
-        <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" alt="The mist">
+      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2" style="font-size:30px">
+        <img
+          src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
+          style="width: 64px;" onclick="onClick(this)" alt="The mist">
+        <p>Unknown</p>
       </div>
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners3">
-        <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" alt="The mist">PE
+      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners3" style="font-size:30px">
+        <img
+          src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
+          style="width: 64px;"
+          onclick="onClick(&quot;https://tsbvi.zoom.us/j/6138283473&quot;)"
+          alt="Elina">
+        <p>PE</p>
       </div>
-   </div>
+      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2" style="font-size:30px"
+        onclick="onClick(https://tsbvi.zoom.us/j/5535732378)">
+        <img
+          src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
+          style="width:100%" alt="Unknown">
+        <p>Unknown</p>
+      </div>
+
+
+    </div>
   </div>
 
   <!-- Modal for full size images on click
