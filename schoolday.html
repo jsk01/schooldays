@@ -3,9 +3,25 @@
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<script lang="javascript">
+  function createClass(name, teacher, url) {
+    this.name = name;
+    this.teacher = teacher;
+    this.url = url;
+  }
+
+  var maxColumns = 3;
+  var classes = [
+    new createClass('Morning Group', 'Erin', 'https://tsbvi.zoom.us/j/6138283473'),
+    new createClass('PE', 'Elina', 'https://tsbvi.zoom.us/j/6138283473'),
+    new createClass('blah1', 'sdfgsdfg', 'https://tsbvi.zoom.us/j/6138283473'),
+    new createClass('blah2', 'ertgsdfg', 'https://tsbvi.zoom.us/j/6138283473'),
+    //new createClass('', '', ''),
+  ];
+</script>
 <style>
   body,
   h1,
@@ -14,7 +30,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Lato", sans-serif;
+    font-family: sans-serif;
   }
 
   body,
@@ -23,8 +39,12 @@
     color: rgb(13, 13, 14);
     line-height: 1.8;
     background-color: white;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 900;
+  }
+
+  div {
+    text-align: center;
   }
 
   .w3-wide {
@@ -38,16 +58,16 @@
   .rcorners1 {
     border-radius: 25px;
     background: #73AD21;
-    padding: 20px;
-    width: 200px;
+    padding: 10px;
+    width: 350px;
     height: 150px;
   }
-
+/*
   .rcorners2 {
     border-radius: 25px;
     border: 2px solid #73AD21;
     padding: 20px;
-    width: 200px;
+    width: 300px;
     height: 150px;
   }
 
@@ -57,14 +77,12 @@
     background-position: left top;
     background-repeat: repeat;
     padding: 20px;
-    width: 200px;
+    width: 300px;
     height: 150px;
-  }
-
+  } */
 </style>
 
 <body>
-
   <!-- Container (Portfolio Section) -->
   <div class="w3-content w3-container" id="portfolio">
     <h3 class="w3-center" style="font-size:60px">School Day Options</h3>
@@ -72,11 +90,12 @@
       <em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them
         bigger</em>
       </p><br> -->
+    <div id='data'></div>
 
-    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -- >
     <div class="w3-row-padding w3-center">
       <div class="w3-col m3 w3-margin w3-hover-opacity rcorners1"
-        onclick="window.location.assign('https://tsbvi.zoom.us/j/6138283473)');"
+        onclick="window.location.assign('https://tsbvi.zoom.us/j/6138283473');"
         >
         <p></p>
         <img src="https://lh3.googleusercontent.com/a-/AOh14GiDvjEHMuE1a-hu1Ic_5SuW2HAgULFiY_CBOxgh9A=s32-c"
@@ -88,7 +107,7 @@
       </div>
     </div>
 
-    <div class="w3-row-padding w3-center w3-section">
+    <div-- class="w3-row-padding w3-center w3-section">
       <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2"
         style="font-size:30px"
         onclick="window.location.assign(this);"
@@ -104,7 +123,7 @@
       </div>
       <div class="w3-col m3 w3-margin w3-hover-opacity rcorners3"
         style="font-size:30px"
-        onclick="javascript:window.location.assign('https://tsbvi.zoom.us/j/6138283473&quot');"
+        onclick="javascript:window.location.assign('https://tsbvi.zoom.us/j/6138283473');"
         >
         <p></p>
         <img
@@ -128,8 +147,40 @@
         </br>
         <em>Unknown</em>
       </div>
-    </div>
+    </div-->
   </div>
 </body>
+<script lang="javascript">
+  var page = document.getElementById('data');
+  var currentColumn = 0;
+
+  classes.forEach(element => {
+    currentColumn++;
+
+    if (currentColumn === 1) {
+      //start new row
+      page.innerHTML += '<div class="w3-row-padding w3-center">';
+    }
+
+    page.innerHTML += `
+      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners1"
+        onclick="window.location.assign('${element.url}');"
+      >
+        ${element.teacher}
+        </br>
+        ${element.name}
+      </div>
+    `
+
+    if (currentColumn === maxColumns) {
+      page.innerHTML += '</div><br>';
+      currentColumn = 0;
+    }
+  });
+
+  //close div
+  page.innerHTML += '</div>';
+
+</script>
 
 </html>
