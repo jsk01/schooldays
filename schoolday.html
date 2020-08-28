@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <script lang="javascript">
   function createClass(name, teacher, url) {
     this.name = name;
@@ -13,13 +11,16 @@
     this.url = url;
   }
 
-  var maxColumns = 3;
+  var maxColumns = 4;
   var classes = [
     new createClass('Morning Group', 'Erin', 'https://tsbvi.zoom.us/j/6138283473'),
-    new createClass('PE', 'Elina', 'https://tsbvi.zoom.us/j/6138283473'),
-    new createClass('blah1', 'sdfgsdfg', 'https://tsbvi.zoom.us/j/6138283473'),
-    new createClass('blah2', 'ertgsdfg', 'https://tsbvi.zoom.us/j/6138283473'),
-    new createClass('blah3', 'ccccccc', 'https://tsbvi.zoom.us/j/6138283473'),
+    new createClass('', 'Missy', 'https://tsbvi.zoom.us/j/5535732378'),
+    new createClass('Fine Arts', 'Eva', 'https://tsbvi.zoom.us/j/6280107975'),
+    new createClass('OT', 'Lisa', 'https://tsbvi.zoom.us/j/4392826171'),
+    new createClass('Speech', 'Shannon', 'https://tsbvi.zoom.us/j/5966885346?pwd=L2s1RGZmNXlyVnNRK3BDbFBPdEVCQT09'),
+    new createClass('PE', 'Elina', 'https://tsbvi.zoom.us/j/6208914869'),
+    new createClass('Career Ed', 'Jesse', 'https://tsbvi.zoom.us/j/5179444156'),
+    new createClass('PT', 'Brittany', 'https://tsbvi.zoom.us/j/7965052735'),
     //new createClass('', '', ''),
   ];
 </script>
@@ -38,9 +39,9 @@
   html {
     height: 100%;
     color: rgb(13, 13, 14);
-    line-height: 1.8;
+    line-height: 2.8;
     background-color: white;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 900;
   }
 
@@ -60,128 +61,18 @@
     border-radius: 25px;
     background: #73AD21;
     padding: 10px;
-    width: 350px;
-    height: 150px;
-  }
-/*
-  .rcorners2 {
-    border-radius: 25px;
-    border: 2px solid #73AD21;
-    padding: 20px;
-    width: 300px;
-    height: 150px;
-  }
-
-  .rcorners3 {
-    border-radius: 25px;
-    background: url(http://blog.hostbaby.com/wp-content/uploads/2013/07/antiquepaper_1400x900-150x96.jpg);
-    background-position: left top;
-    background-repeat: repeat;
-    padding: 20px;
-    width: 300px;
-    height: 150px;
-  } */
+    /* width: 300px;
+ */
+     height: 200px;
+     }
 </style>
 
 <body>
   <!-- Container (Portfolio Section) -->
   <div class="w3-content w3-container" id="portfolio">
     <h3 class="w3-center" style="font-size:60px">School Day Options</h3>
-    <!-- <p class="w3-center">
-      <em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them
-        bigger</em>
-      </p><br> -->
-    <div id='data'></div>
-
-    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -- >
-    <div class="w3-row-padding w3-center">
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners1"
-        onclick="window.location.assign('https://tsbvi.zoom.us/j/6138283473');"
-        >
-        <p></p>
-        <img src="https://lh3.googleusercontent.com/a-/AOh14GiDvjEHMuE1a-hu1Ic_5SuW2HAgULFiY_CBOxgh9A=s32-c"
-          style="width: 64px;"
-          alt="Erin"
-          >&nbsp;Erin
-        </br>
-        <em>Morning Group</em>
-      </div>
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2" style="font-size:30px"
-        onclick="window.location.assign('https://tsbvi.zoom.us/j/5535732378');">
-        <p></p>
-        <img src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
-          style="width: 64px;" alt="Unknown">&nbsp;Missy
-        </br>
-        <em>Missy</em>
-      </div>
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2" style="font-size:30px"
-        onclick="window.location.assign('https://tsbvi.zoom.us/j/6280107975');">
-        <p></p>
-        <img src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
-          style="width: 64px;" alt="Eva">&nbsp;Eva
-        </br>
-        <em>Fine Arts</em>
-      </div>
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2" style="font-size:30px"
-        onclick="window.location.assign('https://tsbvi.zoom.us/j/4392826171');">
-        <p></p>
-        <img src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
-          style="width: 64px;" alt="Lisa">&nbsp;Lisa
-        </br>
-        <em>OT</em>
-      </div>
-    </div>
-
-    <div-- class="w3-row-padding w3-center w3-section">
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2"
-        style="font-size:30px"
-        onclick="window.location.assign('https://tsbvi.zoom.us/j/5966885346?pwd=L2s1RGZmNXlyVnNRK3BDbFBPdEVCQT09');"
-        >
-        <p></p>
-        <img
-          src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
-          style="width: 64px;"
-          alt="Shannon"
-          >&nbsp;Shannon
-        </br>
-        <em>Speech</em>
-      </div>
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners3"
-        style="font-size:30px"
-        onclick="javascript:window.location.assign('https://tsbvi.zoom.us/j/6208914869');"
-        >
-        <p></p>
-        <img
-          src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
-          style="width: 64px;"
-          alt="Elina"
-          >&nbsp;Elina
-        </br>
-        <em>PE</em>
-      </div>
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2"
-        style="font-size:30px"
-        onclick="javascript:window.location.assign('https://tsbvi.zoom.us/j/5179444156');"
-        >
-        <p></p>
-        <img
-          src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
-          style="width: 64px;"
-          alt="Jesse"
-          >&nbsp;Jesse
-        </br>
-        <em>Career Ed</em>
-      </div>
-      <div class="w3-col m3 w3-margin w3-hover-opacity rcorners2" style="font-size:30px"
-        onclick="javascript:window.location.assign('https://tsbvi.zoom.us/j/7965052735');">
-        <p></p>
-        <img src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/s32-c-fbw=1/photo.jpg"
-          style="width: 64px;" alt="Brittany">&nbsp;Brittany
-        </br>
-        <em>PT</em>
-      </div>
-    </div-->
-  </div>
+ </div>
+     <div id='data'></div>
 </body>
 <script lang="javascript">
   var page = document.getElementById('data');
@@ -192,7 +83,7 @@
 
     if (currentColumn === 1) {
       //start new row
-      page.innerHTML += '<div class="w3-row-padding w3-center">';
+    //  page.innerHTML += '<div class="w3-row-padding w3-center">';
     }
 
     page.innerHTML += `
@@ -206,7 +97,7 @@
     `
 
     if (currentColumn === maxColumns) {
-      page.innerHTML += '</div><br>';
+     // page.innerHTML += '</div>';
       currentColumn = 0;
     }
   });
